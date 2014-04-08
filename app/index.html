@@ -6,18 +6,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>jens portfolio</title>
+        <title>Jennifer Miller | Front-End Web Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-
+        <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
+        <link rel="stylesheet" href="bower_components/skeleton/stylesheets/skeleton.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+       
         <script src="bower_components/modernizr/modernizr.js"></script>
 
     </head>
@@ -26,21 +28,113 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+            <div class="navigation">
+                <div class="nav-display">
+                    <ul>
+                        <li><i id="close-nav" class='icon ion-close'></i></li>
+                        <li><a href="#">Home<i class='icon ion-home'></i></a></li>
+                        <li><a href="#Projects">Projects<i class='ion-ios7-briefcase'></i></a></li>
+                        <li><a href="#About">About<i class='ion-social-tux'></i></a></li>
+                        <li><a href="#Contact">Contact<i class='ion-ios7-email'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <section class="home" id="Home">
+                <i id="show-nav" class='icon ion-navicon'></i>
+                <div class="container five columns">
+                    <h2 class="three cloumns offset-by-one">Hi I'm Jen, a front-end web developer from Rochecter, New York.</h2>
+                </div>
+            </section>
+            <section class="about-me" id="About">
+                <div class="container">
+                    <h1>About</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mollis enim a blandit molestie. Maecenas eget lectus sit amet leo mollis consectetur et at eros. Morbi non accumsan tellus. Nulla et magna ut tortor auctor euismod in ut sapien. Proin adipiscing quis elit ac ultrices. Phasellus sapien est, dapibus vel rutrum ac, ornare a elit. Etiam blandit nibh euismod sem faucibus dictum. Fusce accumsan ultricies diam, sit amet imperdiet magna mattis eu. Integer euismod bibendum est, et dapibus lacus interdum vel. Proin euismod sapien risus, id dapibus lacus viverra in. Donec mattis posuere consequat. Maecenas quis tristique purus.
 
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass with Compass</li>
-            <li>Modernizr</li>
-          </ul>
-        </div>
-
+                    Curabitur scelerisque eros felis, a lobortis mi accumsan ac. Phasellus gravida libero at ligula aliquet, ut facilisis leo bibendum. Aenean porttitor consectetur tempor. Mauris imperdiet sit amet odio ut iaculis. Nam placerat quis sapien sed mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam bibendum vel dui sit amet interdum. Donec a odio id nunc molestie semper. Proin dictum facilisis augue vel auctor. Aliquam erat volutpat. Phasellus odio lorem, ultricies in dignissim id, egestas non tortor. Vestibulum tincidunt magna quis lectus egestas adipiscing gravida sed felis.</p>
+                </div>
+            </section>
+            <section id="Projects" class="my-projects">
+                <div class="container">
+                    <h1>Recent Projects</h1>
+                    <div class="project-one">
+                        <div class="project-image">
+                            <a href="http://jennifermmiller.github.io/getInvolved/">
+                                <img src="images/final-project.png">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h2>getInvoloved</h2>
+                            <span></span>
+                            <h3>Primary Technologies</h3>
+                            <ul>
+                                <li>Backbone.js</li>
+                                <li>Parse</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <h3>Other Tools</h3>
+                            <span> Yeoman, SASS, Compass, Bootstrap, jQuery, Underscore.js, Github, Moment.js, Google Maps API, Mandrill API</span>
+                        </div>
+                    </div>
+                    <div class="project-two">
+                        <div class="project-image">
+                            <a href="http://jennifermmiller.github.io/Practice-With-APIs/">
+                                <img src="images/etsy-project.png">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h2>Etsy API</h2>
+                            <span></span>
+                            <h3>Primary Technologies</h3>
+                            <ul>
+                                <li>Backbone.js</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Etsy API</li>
+                            </ul>
+                            <h3>Other Tools</h3>
+                            <span>Yeoman, Bootstrap, jQuery, Underscore.js, Github</span>
+                        </div>
+                    </div>
+                    <div class="project-three">
+                        <div class="project-image">
+                            <a href="http://gloryofthe80s.github.io/Team_Project/">
+                                <img src="images/groupproject.png"/>
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h2>TaskJS</h2>
+                            <span></span>
+                            <h3>Primary Technologies</h3>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                            </ul>
+                            <h3>Other Tools</h3>
+                            <span>Yeoman, jQuery, Underscore.js, Github</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Contact" class="connect">
+                <h1>Let's Connect</h1>
+                <img src="images/me.jpeg">
+                <p>I am currently looking for an exciting opportunity to continue developing my front-end engineering skills. I'm willing to relocate for the right position.</p>
+                <p>Send me an email at <a href="mailto:jmiller6128@gmail.com">jmiller6128@gmail.com</a> and let's talk!</p>
+                <p>Or, find me online.</p>
+                <div class="social">    
+                    <a href="https://github.com/jennifermmiller"><i class='ion-social-github'></i></a>
+                    <a href="https://www.linkedin.com/pub/jennifer-miller/89/7a4/655"><i class='ion-social-linkedin'></i></a>
+                    <a href="https://twitter.com/jmills322"><i class='ion-social-twitter'></i></a>
+                    <a href="https://www.facebook.com/people/Jennifer-Miller/100004657382095"><i class='ion-social-facebook'></i></a>
+                </div>
+            </section>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        
         <!-- endbower -->
         <!-- endbuild -->
 
