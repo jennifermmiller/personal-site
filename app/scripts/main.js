@@ -13,5 +13,4 @@ $(document).ready(function(){
 	$('#close-nav').on('click', function(){
 		$('.nav-display').css('visibility', 'hidden');
 	});
-
 });
