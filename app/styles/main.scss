@@ -2,12 +2,24 @@
 
 //Colors:
 $grey: #8C8D8F;
-$lt-blue: #C2D1D8;
+//$lt-blue: #C2D1D8;
 $dk-blue:#A8B8C8; 
-$brown: #44362B;
+//$brown: #44362B;
 
-body * {
-    margin: 0;
+$green: #BED6C7;
+$blue: #ADC0B4;
+$brown: #8A7E66;
+$lt-brown: #A79B83;
+$beige: #BBB2A1;
+
+$off-white: rgb(231, 233, 230);
+$white: #E8E6DF;
+$salmon: #FF4242;
+$lt-blue: rgb(209, 229, 254);
+
+
+* {
+    margin: 0 auto;
     padding: 0;
     vertical-align: top;
 }
@@ -16,16 +28,25 @@ body {
     background: #fafafa;
     font-family: 'Montserrat', sans-serif;
     color: #333;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-h1{
+h1,
+footer {
     text-align: center;
     margin-bottom: 15px;
 }
 
 ul{
     list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    font-size: 45px;
 }
 
 .container{
@@ -59,22 +80,65 @@ ul{
         font-size: 45px;
     }
 
-    h2{
-        text-align: center;
-        padding-top: 8.5em;
-        font-size: 2em;
-        color: whitesmoke;
+    .my-name{
+        padding-top: 250px;
+
+        h1{
+            text-align: left;
+            color: $salmon;
+            text-transform: uppercase;
+            font-size: 55px;
+            margin-bottom: 5px
+        }
+
+        h2{
+            margin-left: 80px;
+            font-style: italic;
+            color: $lt-blue;
+        }
+    }
+
+    .contact-info{
+        font-size: 20px;
+        text-align: right;
+        margin: 235px 15px 0 0;
+        color: $lt-blue;
+
+        .email{
+            a[href^="mailto:"] { 
+                color: $lt-blue; 
+            }
+        }
+
+        .social {
+            margin-right: 75px;
+            
+            a{
+                margin-right: 20px;
+
+                &:hover{
+
+                }
+
+                &:visited{
+                    color: $lt-blue;
+                }
+
+                i{
+                    font-size: 30px;
+                }
+            }
+        }
     }
 }
-
 
 .nav-display{
     visibility: hidden;
     position: fixed;
     text-align: center;
     font-size: 22px;
-    background: #978679;
-    color: $brown;
+    background: #EDA1A1;
+    color: $salmon;
     margin: 15px;
     @include border-radius(8px);
 
@@ -88,27 +152,19 @@ ul{
                 display: block;
             }
 
-            a{
-                text-decoration: none;
-
-                i{
-                    font-size: 45px;
-                }
-
-                &:visited   {
-                    color: $brown;
-                }
+            a:visited   {
+                color: $salmon;
             }
 
             &:hover{
-                background: rgb(184, 167, 151);
+                background: #978679;
             } 
         }
     }
 }
 
 .about-me{
-    background: rgb(214,222,221);
+    background: $off-white;
     color: $brown;
 
     p{
@@ -118,7 +174,7 @@ ul{
 }
 
 .my-projects{
-    background: rgb(184, 167, 151);
+    background: $white;
 
     .project{
         padding-bottom: 30px;
@@ -130,11 +186,12 @@ ul{
 }
 
 .connect{
-  img{
-    width: 100%
-  }
-}
+    background: $off-white;
 
+    img{
+        width: 100%
+    }
+}
 
 
 

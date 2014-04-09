@@ -1,0 +1,23 @@
+//Home:
+
+
+//
+$('.home').click(function (event) {
+	  event.preventDefault();
+	  $('.top-view-container').scrollView();
+	});
+
+$('.projects').click(function (event) {
+  event.preventDefault();
+  $('.my-work').scrollView();
+});
+
+$('.about').click(function (event) {
+  event.preventDefault();
+  $('.resume').scrollView();
+});
+
+$('.click-contact').click(function (event) {
+  event.preventDefault();
+  $('.contact-me').scrollView();
+});
