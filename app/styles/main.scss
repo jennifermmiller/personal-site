@@ -1,31 +1,21 @@
 @import 'compass/css3';
 
-// @import "../bower_components/ionicons/fonts/";
-
-@font-face {
-  font-family: "Ionicons";
-  src: url("../fonts/ionicons.eot?v=1.3.3");
-  src: url("../fonts/ionicons.eot?v=1.3.3#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=1.3.3") format("truetype"), url("../fonts/ionicons.woff?v=1.3.3") format("woff"), url("../fonts/ionicons.svg?v=1.3.3#Ionicons") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
+//Font(s):
+$montserrat: 'Montserrat', sans-serif;
 
 //Colors:
-$grey: #8C8D8F;
-//$lt-blue: #C2D1D8;
-$dk-blue:#A8B8C8; 
-//$brown: #44362B;
+// $grey: #8C8D8F;
+// $dk-blue:#A8B8C8; 
 
-$green: #BED6C7;
-$blue: #ADC0B4;
+// $lt-brown: #A79B83;
+// $beige: #BBB2A1;
+
 $brown: #8A7E66;
-$lt-brown: #A79B83;
-$beige: #BBB2A1;
-
-$off-white: rgb(231, 233, 230);
-$white: #E8E6DF;
+$off-white: #DBE1E1; //blue tint
+$white: #E2EAE0; //green tint
 $salmon: #FF4242;
 $lt-blue: rgb(209, 229, 254);
+$dk-gray: #353535;
 
 //Basic styles ************************************************
 * {
@@ -36,8 +26,8 @@ $lt-blue: rgb(209, 229, 254);
 
 body {
     background: #fafafa;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+    font-family: $montserrat;
+    color: $dk-gray;
     font-size: 18px;
 }
 
@@ -45,6 +35,10 @@ h1,
 h2,
 footer {
     text-align: center;
+}
+
+h1{
+    font-weight: 700;
 }
 
 a{
@@ -100,7 +94,7 @@ h2{
 
         li{ 
             padding: 10px;
-            border-bottom: 1px solid rgb(153, 152, 152);
+            border-bottom: 1px solid #F9BBBB;
 
             a, 
             i{
@@ -112,7 +106,7 @@ h2{
             }
 
             &:hover{
-                background: #978679;
+                background: #F9BBBB;
             }
 
             i{
@@ -192,7 +186,6 @@ h2{
 //About section ***********************************************
 .about-me{
     background: $off-white;
-    color: $brown;
 
     p{
         font-size: 1.25em;
@@ -242,11 +235,11 @@ h2{
 
             &.etsy,
             &.twitter{
-                margin-top: 15px;
+                margin-top: 10px;
             }
 
             &.todo{
-                margin-top: 40px;
+                margin-top: 30px;
                 padding-bottom: 0;
             }  
         }
@@ -266,12 +259,21 @@ h2{
     p{
         padding: 15px;
 
+        a[href^="mailto:"]{
+            color: $dk-gray;
+            font-weight: 700;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
         &:first-child{
             padding-top: 0;
         }
     }
-    .social{
 
+    .social{
         a {
             i{
                 margin-left: 20px;
@@ -281,12 +283,12 @@ h2{
                 }
 
                 &:hover{
-                    color: #584C36;
+                    color: #151515;
                 }
             }
             
             &:visited{
-                color: $brown;
+                color: $dk-gray;
             }
         }
     }    
@@ -357,17 +359,31 @@ footer{
     }
 
     header{
-        background: cornflowerblue;
+        background: $dk-gray;
         @include border-radius(8px 8px 0 0);
        
         h1{
             padding: 0;
+            color: $salmon;
+            font-size: 46px;
+            text-transform: uppercase;
         }
        
         h2,
         h3,
         .resume-social{
             text-align: center;
+        }
+
+        h2,
+        h3 a,
+        .resume-social a{
+            color: white;
+        }
+
+        h2,
+        .resume-social{
+            padding: 10px 0;
         }
     }
 
@@ -458,17 +474,22 @@ and (max-device-width : 1024px) {
         display: none;
     }
 
-    .my-projects .project .main-info{
-        position: absolute;
-        left: 0;
-        margin-left: 5px;
-    }
+    .my-projects {
+        .project{
+            
+            img {
+                margin-top: 110px;
+            }
 
-    .my-projects .project img {
-        margin-top: 110px;
-    }
+            .main-info{
+                position: absolute;
+                left: 0;
+                margin-left: 5px;
+            }
 
-    .my-projects .project .secondary-info{
-        margin-top: 105px;
+            .secondary-info{
+                margin-top: 105px;
+            }
+        }   
     }
 }

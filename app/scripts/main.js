@@ -13,4 +13,14 @@ $(document).ready(function(){
 	$('#close-nav').on('click', function(){
 		$('.nav-display').css('visibility', 'hidden');
 	});
+
+	$(".nav-display a").bind("click", function(e){
+	 
+		e.preventDefault();
+		var location = $(this).attr("href");
+		 
+		$('html, body').animate({
+			scrollTop: $(location).offset().top
+		}, 1500);
+	});
 });
