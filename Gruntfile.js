@@ -319,22 +319,7 @@ module.exports = function (grunt) {
                 src: '{,*/}*.css'
             }
         },
-        cdn: {
-            options: {
-                /** @required - root URL of your CDN (may contains sub-paths as shown below) */
-                cdn: 'https://jennifermmiller.github.com/personal-page',
-                /** @optional  - if provided both absolute and relative paths will be converted */
-                flatten: false,
-                /** @optional  - if provided will be added to the default supporting types */
-                supportedTypes: { 'phtml': 'html' }
-            },
-            dist: {
-                /** @required  - string (or array of) including grunt glob variables */
-                src: ['./static/*.html', './static/*.css', './static/*.soy'],
-                /** @optional  - if provided a copy will be stored without modifying original file */
-                dest: './dist/static/'
-            }
-        },
+
 
         // Generates a custom Modernizr build that includes only the tests you
         // reference in your app
@@ -413,7 +398,6 @@ module.exports = function (grunt) {
         'copy:dist',
         'modernizr',
         'rev',
-        'cdn:dist',
         'usemin',
         'htmlmin'
     ]);
@@ -423,6 +407,4 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
-
-    grunt.loadNpmTasks('grunt-cdn');
 };

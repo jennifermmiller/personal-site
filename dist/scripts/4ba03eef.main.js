@@ -1,1 +1,0 @@
-console.log("'Allo 'Allo!"),$(document).ready(function(){$("#show-nav").on("click",function(){"hidden"==$(".nav-display").css("visibility")?$(".nav-display").css("visibility","visible"):$(".nav-display").css("visibility","hidden")}),$("#close-nav").on("click",function(){$(".nav-display").css("visibility","hidden")})});
