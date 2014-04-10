@@ -15,6 +15,7 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    console.log('here!', this.includeCompass);
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -305,7 +306,8 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*'
+                        'styles/fonts/{,*/}*.*',
+                        'bower_components/ionicons/fonts/*.*'
                     ]
                 }]
             },
