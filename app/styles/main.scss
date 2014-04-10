@@ -43,6 +43,7 @@ h1{
 
 a{
     text-decoration: none;
+    color: $dk-gray;
 
     &:visited{
         color: $dk-gray;
@@ -105,8 +106,12 @@ h2{
                 display: block;
             }
 
-            a:visited   {
+            a{
                 color: $salmon;
+
+                &:visited   {
+                    color: $salmon;
+                }
             }
 
             &:hover{
@@ -117,8 +122,13 @@ h2{
                 margin-top: 5px;
             }
 
+            &:first-child{
+                @include border-radius(8px 8px 0 0);
+            }
+
             &:last-child{
                 border: none;
+                @include border-radius(0 0 8px 8px);
             }
         }
     }
@@ -395,7 +405,7 @@ $fontcolor: #595454;
        
         h1{
             padding: 0;
-            color: blueviolet;
+            color: rgb(129, 28, 224);
             font-size: 46px;
             text-transform: uppercase;
         }
