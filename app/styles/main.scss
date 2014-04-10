@@ -1,7 +1,7 @@
 @import 'compass/css3';
 
 //Font(s):
-$montserrat: 'Montserrat', sans-serif;
+$montserrat: 'Lato', sans-serif;
 
 //Colors:
 // $grey: #8C8D8F;
@@ -63,7 +63,7 @@ h1{
 }
 
 h2{
-    font-size: 32px;
+    font-size: 28px;
 }
 .container{
     max-width: 860px;
@@ -126,9 +126,16 @@ h2{
 
 //Home section ****************************************************
 .home {
-    background: url(/../images/redbanklg.jpeg) no-repeat center;
-    background-size: cover;
+    //background: url(/../images/redbanklg.jpeg) no-repeat center;
+    //background-size: cover;
     font-family: 'Lato', sans-serif;
+
+    #redbank {
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
+        z-index: -1;
+    }
 
     #show-nav{
         position: fixed;
@@ -255,7 +262,7 @@ h2{
             }
 
             &.todo{
-                margin-top: 30px;
+                margin-top: 25px;
                 padding-bottom: 0;
             }  
         }
