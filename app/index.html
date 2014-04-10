@@ -13,7 +13,7 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
-        <link rel="stylesheet" href="bower_components/skeleton/stylesheets/skeleton.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="bower_components/skeleton/stylesheets/skeleton.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -31,8 +31,8 @@
             <div class="navigation">
                 <div class="nav-display">
                     <ul>
-                        <li><i id="close-nav" class='icon ion-close'></i></li>
-                        <li><a href="">Home<i class='icon ion-home'></i></a></li>
+                        <li><i id="close-nav" class='icon ion-close size-16'></i></li>
+                        <li><a href="#">Home<i class='icon ion-home'></i></a></li>
                         <li><a href="#About">About<i class='ion-social-tux'></i></a></li>
                         <li><a href="#Projects">Projects<i class='ion-ios7-briefcase'></i></a></li>
                         <li><a href="#Contact">Contact<i class='ion-ios7-email'></i></a></li>
@@ -42,7 +42,7 @@
             <section class="home" id="Home">
                 <i id="show-nav" class='icon ion-navicon'></i>
                 <div class="container sixteen columns">
-                    <div class="my-name offset-by-three">
+                    <div class="my-name">
                         <h1>Jennifer Miller</h1>
                         <h2>Front-End Web Developer</h2>
                     </div>
@@ -70,7 +70,7 @@
             </section>
             <section id="Projects" class="my-projects">
                 <div class="container">
-                    <h1>Recent Projects</h1>
+                    <h1>Work</h1>
                     <div class="project sixteen columns">
                         <div class="project-image eight columns">
                             <a href="http://jennifermmiller.github.io/getInvolved/">
@@ -78,17 +78,21 @@
                             </a>
                         </div>
                         <div class="project-info six columns">
-                            <h2>getInvoloved</h2>
-                            <span></span>
-                            <h3>Primary Technologies</h3>
-                            <ul>
-                                <li>Backbone.js</li>
-                                <li>Parse</li>
-                                <li>HTML</li>
-                                <li>SASS</li>
-                            </ul>
-                            <h3>Other Tools</h3>
-                            <span> Yeoman, Compass, Bootstrap, jQuery, Underscore.js, Github, Moment.js, Google Maps API, Mandrill API</span>
+                            <div class="main-info">
+                                <h2>getInvoloved</h2>
+                                <span>A social application that allows users to create and sign up for volunteer events within their community.</span>
+                            </div>
+                            <div class="secondary-info">
+                                <h3>Primary Technologies</h3>
+                                <ul>
+                                    <li>Backbone.js</li>
+                                    <li>Parse</li>
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <h3>Other Tools</h3>
+                                <span> Yeoman, Compass, Bootstrap, jQuery, Underscore.js, Github, Moment.js, Google Maps API, Mandrill API</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project sixteen columns">
@@ -98,17 +102,21 @@
                             </a>
                         </div>
                         <div class="project-info six columns">
-                            <h2>Shop Etsy Pottery</h2>
-                            <span></span>
-                            <h3>Primary Technologies</h3>
-                            <ul>
-                                <li>Backbone.js</li>
-                                <li>Etsy API</li>
-                                <li>HTML</li>
-                                <li>SASS</li>
-                            </ul>
-                            <h3>Other Tools</h3>
-                            <span>Yeoman, Bootstrap, jQuery, Underscore.js, Github</span>
+                            <div class="main-info">
+                                <h2>Shop Etsy Pottery</h2>
+                                <span>An application that allows the user to browse the most current pottery listings on Etsy.</span>
+                            </div>
+                            <div class="secondary-info">
+                                <h3>Primary Technologies</h3>
+                                <ul>
+                                    <li>Backbone.js</li>
+                                    <li>Etsy API</li>
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <h3>Other Tools</h3>
+                                <span>Yeoman, Bootstrap, jQuery, Underscore.js, Github</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project sixteen columns">
@@ -118,17 +126,21 @@
                             </a>
                         </div>
                         <div class="project-info six columns">
-                            <h2>Mini Twitter</h2>
-                            <span></span>
-                            <h3>Primary Technologies</h3>
-                            <ul>
-                                <li>Backbone.js</li>
-                                <li>Parse</li>
-                                <li>HTML</li>
-                                <li>SASS</li>
-                            </ul>
-                            <h3>Other Tools</h3>
-                            <span>Yeoman, Bootstrap, jQuery, Underscore.js, Github, Moment.js</span>
+                            <div class="main-info">
+                                <h2>Mini Twitter</h2>
+                                <span>A messaging application that allows users to login to send and receive messages.</span>
+                            </div>
+                            <div class="secondary-info">
+                                <h3>Primary Technologies</h3>
+                                <ul>
+                                    <li>Backbone.js</li>
+                                    <li>Parse</li>
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <h3>Other Tools</h3>
+                                <span>Yeoman, Bootstrap, jQuery, Underscore.js, Github, Moment.js</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project sixteen columns">
@@ -138,30 +150,34 @@
                             </a>
                         </div>
                         <div class="project-info six columns">
-                            <h2>Todo App</h2>
-                            <span></span>
-                            <h3>Primary Technologies</h3>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                            </ul>
-                            <h3>Other Tools</h3>
-                            <span>Yeoman, jQuery, Underscore.js, Github</span>
+                            <div class="main-info">
+                                <h2>Todo App</h2>
+                                <span>A simple to-do list application that allows users add, edit, complete, and delete tasks.</span>
+                            </div>
+                            <div class="secondary-info">
+                                <h3>Primary Technologies</h3>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                </ul>
+                                <h3>Other Tools</h3>
+                                <span>Yeoman, SASS, jQuery, Underscore.js, Github, Bootstrap, Backbone.js, Parse</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="Contact" class="connect">
                 <div class="container sixteen columns">
-                    <h1>Let's Connect</h1>
+                    <h1>Contact</h1>
                     <div class="my-pic four columns">
                         <img src="images/me2.jpeg">
                     </div>
                     <div class="contact-info ten columns">
                         <p>I am currently looking for an exciting opportunity to continue developing my front-end engineering skills. I'm willing to relocate for the right position.</p>
                         <p>Send me an email at <a href="mailto:jmiller6128@gmail.com">jmiller6128@gmail.com</a> and let's talk!</p>
-                        <p>Or, find me online.</p>
+                        <p>Or, find me online:</p>
                         <div class="social">    
                             <a href="https://github.com/jennifermmiller"><i class='ion-social-github'></i></a>
                             <a href="https://www.linkedin.com/pub/jennifer-miller/89/7a4/655"><i class='ion-social-linkedin'></i></a>
