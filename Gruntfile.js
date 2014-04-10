@@ -322,7 +322,7 @@ module.exports = function (grunt) {
         cdn: {
             options: {
                 /** @required - root URL of your CDN (may contains sub-paths as shown below) */
-                cdn: 'http://cdn.cloudfront.net/container/',
+                cdn: 'https://jennifermmiller.github.com/personal-page',
                 /** @optional  - if provided both absolute and relative paths will be converted */
                 flatten: false,
                 /** @optional  - if provided will be added to the default supporting types */
@@ -413,6 +413,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'modernizr',
         'rev',
+        'cdn:dist',
         'usemin',
         'htmlmin'
     ]);
