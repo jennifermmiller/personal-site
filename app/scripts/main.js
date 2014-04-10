@@ -23,4 +23,8 @@ $(document).ready(function(){
 			scrollTop: $(location).offset().top
 		}, 1500);
 	});
+
+	$('.print').click(function(){
+		window.print();
+	});
 });

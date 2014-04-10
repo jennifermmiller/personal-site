@@ -12,9 +12,9 @@ $montserrat: 'Montserrat', sans-serif;
 
 $brown: #8A7E66;
 $off-white: #DBE1E1; //blue tint
-$white: #E2EAE0; //green tint
+$white: #F5F8F4; //green tint
 $salmon: #FF4242;
-$lt-blue: rgb(209, 229, 254);
+$lt-blue: #DDE3EA;
 $dk-gray: #353535;
 
 //Basic styles ************************************************
@@ -25,7 +25,7 @@ $dk-gray: #353535;
 }
 
 body {
-    background: #fafafa;
+    background: darkgrey;
     font-family: $montserrat;
     color: $dk-gray;
     font-size: 18px;
@@ -43,6 +43,10 @@ h1{
 
 a{
     text-decoration: none;
+
+    &:visited{
+        color: $dk-gray;
+    }
 }
 
 ul{
@@ -84,7 +88,7 @@ h2{
     position: fixed;
     text-align: center;
     font-size: 16px;
-    background: #EDA1A1;
+    background: #FE8F8F;
     color: $salmon;
     margin: 15px;
     @include border-radius(8px);
@@ -169,7 +173,7 @@ h2{
             padding: 5px 0;
             
             a{
-                margin-right: 20px;
+                margin-right: 10px;
 
                 &:visited{
                     color: $lt-blue;
@@ -190,6 +194,18 @@ h2{
     p{
         font-size: 1.25em;
         line-height: 2em;
+
+        a{
+            font-style: italic;
+              
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:last-child{
+                font-weight: 700;
+            }
+        }
     }
 }
 
@@ -300,10 +316,13 @@ footer{
 }
 
 //************************** Start of resume styling *****************************
+$fontcolor: #595454;
+
 .resume-container{
     width: 720px;
+    color: $fontcolor;
     background: $off-white;
-    margin: 60px auto;
+    margin: 30px auto;
     @include border-radius(8px);
 
     h2{
@@ -325,11 +344,15 @@ footer{
     }
 
     a{
-        color: #333;
+        color: $fontcolor;
 
         &:hover{
             text-decoration: underline;
         }
+    }
+
+    p{
+        padding-top: 5px;
     }
 
     ul{
@@ -359,12 +382,13 @@ footer{
     }
 
     header{
-        background: $dk-gray;
+        border-bottom: 1px solid #B9B5B5;
         @include border-radius(8px 8px 0 0);
+        margin-bottom: 10px;
        
         h1{
             padding: 0;
-            color: $salmon;
+            color: blueviolet;
             font-size: 46px;
             text-transform: uppercase;
         }
@@ -378,7 +402,7 @@ footer{
         h2,
         h3 a,
         .resume-social a{
-            color: white;
+          //  color: white;
         }
 
         h2,
@@ -391,11 +415,30 @@ footer{
         line-height: 1.25em;
         @include border-radius(0 0 8px 8px);
 
+        .print{
+            float: right;
+
+            i{
+                padding-right: 5px;
+            }
+        }
+
         section{
             padding: 10px 0;
 
+            &.objective{
+                padding-top: 15px;
+            }
+
             &.skills{
-             
+                p{ 
+
+                    a{
+                        font-weight: 700;
+                        font-style: italic;
+                    }
+                }
+
                 .skill{
                     margin-top: 10px;
                 }
@@ -406,6 +449,8 @@ footer{
 
 
 //***********************Media Queries*******************
+//look into viewport meta tags
+
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 480px) {
