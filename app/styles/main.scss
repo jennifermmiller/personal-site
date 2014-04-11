@@ -25,7 +25,6 @@ $dk-gray: #353535;
 }
 
 body {
-    background: darkgrey;
     font-family: $montserrat;
     color: $dk-gray;
     font-size: 18px;
@@ -143,16 +142,9 @@ h2{
 
 //Home section ****************************************************
 .home {
-    background: url(redbanklg.jpeg) no-repeat center;
+    background: url(../images/redbanklg.jpeg) no-repeat center;
     background-size: cover;
     font-family: 'Lato', sans-serif;
-
-    #redbank {
-        width: 100%;
-        height: 100% !important;
-        position: absolute;
-        z-index: -1;
-    }
 
     #show-nav{
         position: fixed;
@@ -339,16 +331,14 @@ footer{
 //************************** Start of resume styling *****************************
 $fontcolor: #595454;
 
-.resume-body{
-    background: url(../images/rockcopy.jpeg) no-repeat;
-    background-size: cover;
-   // width: 100%;
+.resume-body{  
+    background: $off-white
+    
 }
 
 .resume-container{
-    width: 720px;
-    color: $fontcolor;
-    background: $off-white;
+    max-width: 820px;
+   // color: $fontcolor;
     margin: 30px auto;
     @include border-radius(8px);
 
@@ -415,7 +405,7 @@ $fontcolor: #595454;
        
         h1{
             padding: 0;
-            color: rgb(129, 28, 224);
+            color: $salmon;
             font-size: 46px;
             text-transform: uppercase;
         }
