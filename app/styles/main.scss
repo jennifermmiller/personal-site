@@ -516,9 +516,16 @@ and (max-device-width: 480px) {
             .social{
                 margin-right: 0;
             }
-        }
+        }   
+    }
 
-        
+    .about{
+        font-size: 1em;
+        line-height: 1.25em;
+
+        p{
+            margin: 0 5px;
+        }
     }
 
     .my-projects{
@@ -526,8 +533,13 @@ and (max-device-width: 480px) {
         .project{ 
 
             .project-info{
-                margin: 15px 0 0 15px;
+
+                margin-left: 15px;
                 padding-left: 0;
+
+                .main-info{
+                    margin-top: 10px;
+                }
             }
         }
     }    
