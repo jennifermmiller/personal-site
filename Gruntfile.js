@@ -138,9 +138,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-
-
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
@@ -181,7 +178,7 @@ module.exports = function (grunt) {
                     src: '{,*/}*.css',
                     dest: '.tmp/styles/'
                 }]
-            }
+            },
         },
 
         // Automatically inject Bower components into the HTML file
@@ -349,6 +346,23 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        cdn: {
+            options: {
+                /** @required - root URL of your CDN (may contains sub-paths as shown below) */
+                cdn: 'http://jennifermmiller.github.io/personal-site/',
+                /** @optional  - if provided both absolute and relative paths will be converted */
+                flatten: false,
+                /** @optional  - if provided will be added to the default supporting types */
+                supportedTypes: { 'phtml': 'html' }
+            },
+            dist: {
+                /** @required  - string (or array of) including grunt glob variables */
+                src: ['./static/*.html', './static/*.css', './static/*.soy'],
+                /** @optional  - if provided a copy will be stored without modifying original file */
+                dest: './dist/static/'
+            }
         }
     });
 
@@ -407,4 +421,6 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+    grunt.loadNpmTasks('grunt-cdn');
 };
