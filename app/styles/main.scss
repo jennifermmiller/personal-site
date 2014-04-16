@@ -473,7 +473,7 @@ and (min-device-width: 320px)
 and (max-device-width: 480px) {
     .container{
         min-width: 320px;
-        padding-left: 5px;
+        padding: 5px 0;
     }
 
     h1{
@@ -504,19 +504,29 @@ and (max-device-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
+            .email span,
+            .social a{
+                color: $lt-blue;
+            }
+
             .social{
                 margin-right: 0;
 
-                a:visited{
+                a:visited,
+                a:hover{
                     color: $lt-blue;
                 }
             }
         }   
     }
 
-    .about{
+    .about-me{
+
+        h1{
+            padding: 45px 0 10px 0;
+        }
         font-size: 1em;
-        line-height: 1em;
+        line-height: 1.5em;
 
         p{
             padding: 0 5px;
@@ -534,6 +544,10 @@ and (max-device-width: 480px) {
 
                 .main-info{
                     margin-top: 10px;
+
+                    &:first-child{
+                        padding-top: 10px;
+                    }
                 }
             }
         }
