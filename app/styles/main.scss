@@ -371,11 +371,10 @@ $fontcolor: #595454;
     }
 
     a{
-        color: $fontcolor;
         text-decoration: underline;
 
         &:hover{
-            text-shadow: 0 1px;
+            color: #111111;
         }
     }
 
@@ -428,12 +427,6 @@ $fontcolor: #595454;
         }
 
         h2,
-        h3 a,
-        .resume-social a{
-          //  color: white;
-        }
-
-        h2,
         .resume-social{
             padding: 10px 0;
         }
@@ -441,7 +434,6 @@ $fontcolor: #595454;
 
     .resume-content{
         line-height: 1.25em;
-        @include border-radius(0 0 8px 8px);
 
         .print{
             float: right;
@@ -462,8 +454,13 @@ $fontcolor: #595454;
                 p{ 
 
                     a{
-                        font-weight: 700;
                         font-style: italic;
+                        color: $fontcolor;
+                        text-decoration: underline;
+
+                        &:hover{
+                            text-shadow: 0 1px;
+                        }
                     }
                 }
 
@@ -517,7 +514,10 @@ and (max-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
-            .email span,
+            .email span{
+                color: $lt-blue;
+            }
+            
             .social a{
                 color: $lt-blue;
             }
