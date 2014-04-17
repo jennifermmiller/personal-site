@@ -497,6 +497,8 @@ and (max-device-width: 480px) {
     }
     
     .home {
+        height: 520px;
+
         #show-nav{
             display: none;
         }   
@@ -516,7 +518,10 @@ and (max-device-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
-            .email span,
+            .email span{
+                color: $lt-blue;
+            }
+
             .social a{
                 color: $lt-blue;
             }
@@ -534,15 +539,19 @@ and (max-device-width: 480px) {
 
     .about-me{
 
+        font-size: 1em;
+        line-height: 1em;
+
         h1{
             padding: 45px 0 10px 0;
         }
-        font-size: 1em;
-        line-height: 1.5em;
 
-        .my-pic img, 
+        .my-pic img{
+            padding-left: 10px;
+        }
+
         p{
-            padding: 0 5px;
+            padding: 0 10px;
         }
     }
 
@@ -570,8 +579,14 @@ and (max-device-width: 480px) {
         }
     }    
 
-    .connect .contact-info{
-        margin: 20px 15px;
+    .connect{
+        .my-pic img{
+            padding-left: 10px;
+        } 
+
+        .contact-info{
+            margin: 20px 15px;
+        }
     }
 }
 
