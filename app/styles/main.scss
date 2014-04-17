@@ -350,9 +350,7 @@ $fontcolor: #595454;
 
 .resume-container{
     max-width: 820px;
-   // color: $fontcolor;
     margin: 30px auto;
-    @include border-radius(8px);
 
     h2{
         font-size: 28px;
@@ -374,9 +372,10 @@ $fontcolor: #595454;
 
     a{
         color: $fontcolor;
+        text-decoration: underline;
 
         &:hover{
-            text-decoration: underline;
+            text-shadow: 0 1px;
         }
     }
 
@@ -481,8 +480,8 @@ $fontcolor: #595454;
 //look into viewport meta tags
 
 @media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px) {
+and (min-width: 320px) 
+and (max-width: 480px) {
     .container{
         min-width: 320px;
         padding: 5px 0;
@@ -514,14 +513,11 @@ and (max-device-width: 480px) {
 
         .contact-info{
             text-align: center;
-            margin: 150px 0 0 0;
+            margin: 95px 0 0 0;
             font-size: 18px;
             color: $lt-blue;
 
-            .email span{
-                color: $lt-blue;
-            }
-
+            .email span,
             .social a{
                 color: $lt-blue;
             }
@@ -537,10 +533,7 @@ and (max-device-width: 480px) {
         }   
     }
 
-    .about-me{
-
-        font-size: 1em;
-        line-height: 1em;
+    .about-me .container{
 
         h1{
             padding: 45px 0 10px 0;
@@ -552,6 +545,8 @@ and (max-device-width: 480px) {
 
         p{
             padding: 0 10px;
+            font-size: 1em;
+            line-height: normal;
         }
     }
 
@@ -560,7 +555,7 @@ and (max-device-width: 480px) {
         .project{
 
             .project-image a img{
-                padding-left: 5px;
+                padding-left: 10px;
             }
 
             .project-info{
