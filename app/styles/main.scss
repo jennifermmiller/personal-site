@@ -430,6 +430,14 @@ $fontcolor: #595454;
         .resume-social{
             padding: 10px 0;
         }
+
+        h3 a{
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     .resume-content{
@@ -492,7 +500,7 @@ and (max-width: 480px) {
         font-size: 1.5em;
     }
     
-    .home {
+    .home{
         height: 520px;
 
         #show-nav{
@@ -514,10 +522,13 @@ and (max-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
-            .email span{
-                color: $lt-blue;
+            .email {
+
+                span{
+                    color: $lt-blue;
+                }
             }
-            
+
             .social a{
                 color: $lt-blue;
             }
