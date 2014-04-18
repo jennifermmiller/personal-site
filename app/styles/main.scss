@@ -3,18 +3,12 @@
 //Font(s):
 $montserrat: 'Lato', sans-serif;
 
-//Colors:
-// $grey: #8C8D8F;
-// $dk-blue:#A8B8C8; 
-
-// $lt-brown: #A79B83;
-// $beige: #BBB2A1;
-
 $brown: #8A7E66;
 $off-white: #E0EAEA; //blue tint
 $white: #F5F8F4; //green tint
 $salmon: #FF4242;
 $lt-blue: #DDE3EA;
+$md-blue: #A7B7CC;
 $dk-gray: #353535;
 
 //Basic styles ************************************************
@@ -30,6 +24,17 @@ body {
     font-size: 18px;
 }
 
+.container{
+    max-width: 860px;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
 h1,
 h2,
 footer {
@@ -42,7 +47,6 @@ h1{
 
 a{
     text-decoration: none;
-    color: $dk-gray;
 
     &:visited{
         color: $dk-gray;
@@ -71,16 +75,6 @@ h1{
 
 h2{
     font-size: 28px;
-}
-.container{
-    max-width: 860px;
-}
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
 }
 
 .about-me,
@@ -115,13 +109,9 @@ h2{
             a{
                 color: $salmon;
 
-                &:visited   {
+                &:visited{
                     color: $salmon;
                 }
-            }
-
-            &:hover{
-                background: #F9BBBB;
             }
 
             i{
@@ -135,6 +125,10 @@ h2{
             &:last-child{
                 border: none;
                 @include border-radius(0 0 8px 8px);
+            }
+
+            &:hover{
+                background: #F9BBBB;
             }
         }
     }
@@ -175,11 +169,14 @@ h2{
         padding-bottom: 250px;
         color: $lt-blue;
 
-        .email a[href^="mailto:"]{ 
-            color: $lt-blue; 
+        .email a[href^="mailto:"],
+        .email span{ 
+            color: $lt-blue;
+        }
 
+        .email a[href^="mailto:"]{
             &:hover{
-                color: #A7B7CC;
+                color: $md-blue;
             }
         }
 
@@ -196,7 +193,7 @@ h2{
                 }
 
                 &:hover{
-                    color: #A7B7CC;
+                    color: $md-blue;
                 }
             }
         }
@@ -485,8 +482,8 @@ $fontcolor: #595454;
 //look into viewport meta tags
 
 @media only screen 
-and (min-width: 320px) 
-and (max-width: 480px) {
+and (min-device-width: 320px) 
+and (max-device-width: 480px) {
     .container{
         min-width: 320px;
         padding: 5px 0;
@@ -522,7 +519,7 @@ and (max-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
-            .email {
+            .email{
 
                 span{
                     color: $lt-blue;
@@ -588,7 +585,7 @@ and (max-width: 480px) {
     .connect{
         .my-pic img{
             padding-left: 10px;
-        } 
+        }
 
         .contact-info{
             margin: 20px 15px;
@@ -605,17 +602,21 @@ and (max-device-width : 1024px) {
         display: none;
     }
 
-    .my-projects {
+    .about-me{
+        padding: 0 15px;
+    }
+
+    .my-projects{
         .project{
             
-            img {
+            img{
                 margin-top: 110px;
             }
 
             .main-info{
                 position: absolute;
                 left: 0;
-                margin-left: 5px;
+                padding-left: 15px;
             }
 
             .secondary-info{
