@@ -517,7 +517,7 @@ and (max-device-width: 480px) {
 
             .email{
 
-                span{
+                span a[href^="tel:"]:before{
                     color: $lt-blue;
                 }
             }
@@ -597,10 +597,17 @@ and (max-device-width : 1024px) {
         display: none;
     }
 
+    .contact-info .email{
+
+        span a[href^="tel:"]:before{
+            color: $lt-blue;
+        }
+    }
+
     .about-me{
         padding-left: 15px;
     }
-
+    
     .my-projects{
         .project{
             
