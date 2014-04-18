@@ -10,6 +10,7 @@ $salmon: #FF4242;
 $lt-blue: #DDE3EA;
 $md-blue: #A7B7CC;
 $dk-gray: #353535;
+$fontcolor: #595454; //of resume
 
 //Basic styles ************************************************
 * {
@@ -47,6 +48,7 @@ h1{
 
 a{
     text-decoration: none;
+    color: $dk-gray;
 
     &:visited{
         color: $dk-gray;
@@ -83,7 +85,7 @@ h2{
     padding-bottom: 45px;
 }
 
-//Navigation ***************************************************
+//Navigation ********************************************************
 .nav-display{
     visibility: hidden;
     position: fixed;
@@ -109,9 +111,13 @@ h2{
             a{
                 color: $salmon;
 
-                &:visited{
+                &:visited   {
                     color: $salmon;
                 }
+            }
+
+            &:hover{
+                background: #F9BBBB;
             }
 
             i{
@@ -125,10 +131,6 @@ h2{
             &:last-child{
                 border: none;
                 @include border-radius(0 0 8px 8px);
-            }
-
-            &:hover{
-                background: #F9BBBB;
             }
         }
     }
@@ -169,12 +171,9 @@ h2{
         padding-bottom: 250px;
         color: $lt-blue;
 
-        .email a[href^="mailto:"],
-        .email span{ 
-            color: $lt-blue;
-        }
+        .email a[href^="mailto:"]{ 
+            color: $lt-blue; 
 
-        .email a[href^="mailto:"]{
             &:hover{
                 color: $md-blue;
             }
@@ -281,10 +280,9 @@ h2{
             }  
         }
     }
-
 }
 
-//Contact section *******************************************
+//Contact section *********************************************
 .connect{
     background: $off-white;
 
@@ -312,7 +310,7 @@ h2{
     }
 
     .social{
-        a {
+        a{
             i{
                 margin-left: 20px;
 
@@ -337,12 +335,10 @@ footer{
     padding: 15px 0;
 }
 
-//************************** Start of resume styling *****************************
-$fontcolor: #595454;
 
+//************************** Start of resume styling *****************************
 .resume-body{  
-    background: $off-white
-    
+    background: $off-white  
 }
 
 .resume-container{
@@ -406,9 +402,9 @@ $fontcolor: #595454;
     }
 
     header{
+        margin-bottom: 10px;
         border-bottom: 1px solid #B9B5B5;
         @include border-radius(8px 8px 0 0);
-        margin-bottom: 10px;
        
         h1{
             padding: 0;
@@ -596,14 +592,13 @@ and (max-device-width: 480px) {
 /* iPads (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-    
+and (max-device-width : 1024px) { 
     #show-nav{
         display: none;
     }
 
     .about-me{
-        padding: 0 15px;
+        padding-left: 15px;
     }
 
     .my-projects{

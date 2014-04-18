@@ -1,7 +1,6 @@
-console.log('\'Allo \'Allo!');
+console.log('Welcome to Jen\'s super site! Thanks for visiting! Enjoy!');
 
 $(document).ready(function(){
-
 	$('#show-nav').on('click', function(){
 		if($('.nav-display').css('visibility') == 'hidden') {
 			$('.nav-display').css('visibility', 'visible');
@@ -15,10 +14,8 @@ $(document).ready(function(){
 	});
 
 	$(".nav-display a").bind("click", function(e){
-	 
 		e.preventDefault();
-		var location = $(this).attr("href");
-		 
+		var location = $(this).attr("href");	 
 		$('html, body').animate({
 			scrollTop: $(location).offset().top
 		}, 1500);
