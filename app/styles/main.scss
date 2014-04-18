@@ -171,7 +171,7 @@ h2{
         padding-bottom: 250px;
         color: $lt-blue;
 
-        .email a[href^="mailto:"]{ 
+        .email a{ 
             color: $lt-blue; 
 
             &:hover{
@@ -515,13 +515,7 @@ and (max-device-width: 480px) {
             font-size: 18px;
             color: $lt-blue;
 
-            .email{
-
-                span a[href^="tel:"]:before{
-                    color: $lt-blue;
-                }
-            }
-
+            .email a,
             .social a{
                 color: $lt-blue;
             }
@@ -537,7 +531,7 @@ and (max-device-width: 480px) {
         }   
     }
 
-    .about-me .container{
+    .about-me{
 
         h1{
             padding: 45px 0 10px 0;
@@ -607,7 +601,7 @@ and (max-device-width : 1024px) {
     .about-me{
         padding-left: 15px;
     }
-    
+
     .my-projects{
         .project{
             
