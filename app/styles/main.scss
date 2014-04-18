@@ -581,17 +581,6 @@ and (max-device-width: 480px) {
             margin: 20px 15px;
         }
     }
-
-    .resume-container header {
-
-        h3 a{
-            text-decoration: none;
-
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-    }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -630,16 +619,5 @@ and (max-device-width : 1024px) {
                 margin-top: 105px;
             }
         }   
-    }
-
-    .resume-container header {
-
-        h3 a{
-            text-decoration: none;
-
-            &:hover{
-                text-decoration: underline;
-            }
-        }
     }
 }
